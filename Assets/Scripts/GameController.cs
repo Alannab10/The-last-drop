@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,6 @@ public class GameController : MonoBehaviour
 
     public delegate void DelegatedGameEvents();
     public DelegatedGameEvents GameStartedFirstTimeEvent;
-    public DelegatedGameEvents GameStartedEvent;
     public DelegatedGameEvents GamePausedEvent;
     public DelegatedGameEvents GameResumedEvent;
     public DelegatedGameEvents GameEndedEvent;
@@ -27,13 +27,12 @@ public class GameController : MonoBehaviour
     }
     public void GameStartedFirst()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level 1");
         GameStartedFirstTimeEvent?.Invoke();
     }
-    public void GameStarted()
+    public void GameReload()
     {
-        Time.timeScale = 1f;
-        GameStartedEvent?.Invoke();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void GamePaused()
     {
