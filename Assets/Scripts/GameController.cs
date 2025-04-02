@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     }
     public void GameStartedFirst()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level 1");
         GameStartedFirstTimeEvent?.Invoke();
     }
     public void GameStarted()
