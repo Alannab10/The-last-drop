@@ -30,4 +30,8 @@ public class AudioManager : MonoBehaviour
         music.clip = musicSong;
         music.Play();
     }
+    public void VolumeMusic (float newVolume)
+    {
+        music.volume = newVolume;
+    }
 }
