@@ -1,56 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance;
+    public static GameController Instancia;
 
-    public delegate void DelegatedGameEvents();
-    public DelegatedGameEvents GameStartedFirstTimeEvent;
-    public DelegatedGameEvents GamePausedEvent;
-    public DelegatedGameEvents GameResumedEvent;
-    public DelegatedGameEvents GameEndedEvent;
-     void Awake()
+    public delegate void EventosJuegoDelegado();
+    public EventosJuegoDelegado JuegoIniciadoEvento;
+    public EventosJuegoDelegado JuegoFinalizadoEvento;
+    public EventosJuegoDelegado JuegoPausadoEvento;
+    public EventosJuegoDelegado JuegoReanudadoEvento;
+
+    public void Awake()
     {
-        if (Instance == null)
+        if (Instancia == null)
         {
-            Instance = this;
+            Instancia = this;
         }
         else
         {
             Destroy(gameObject);
         }
+
         Time.timeScale = 0f;
     }
-    public void GameStartedFirst()
-    {
-        SceneManager.LoadScene("Level 1");
-        GameStartedFirstTimeEvent?.Invoke();
-    }
-    public void GameReload()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    public void GamePaused()
-    {
-        Time.timeScale = 0f;
-        GamePausedEvent?.Invoke();
-    }
-    public void GameResumed()
+
+    public void IniciarJuego()
     {
         Time.timeScale = 1f;
-        GameResumedEvent?.Invoke();
+        JuegoIniciadoEvento?.Invoke();
     }
-    public void GameEnded()
+
+    public void FinalizarJuego()
     {
         Time.timeScale = 0f;
-        GameEndedEvent?.Invoke();
+        JuegoFinalizadoEvento?.Invoke();
     }
-    public void GameQuit()
+
+    public void PausarJuego()
     {
-        Application.Quit(); 
+        Time.timeScale = 0f;
+        JuegoPausadoEvento?.Invoke();
+    }
+
+    public void ReanudarJuego()
+    {
+        Time.timeScale = 1f;
+        JuegoReanudadoEvento?.Invoke();
+    }
+
+    public void CerrarJuego()
+    {
+        Application.Quit();
+    }
+
+    public void ReiniciarJuego()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
+
