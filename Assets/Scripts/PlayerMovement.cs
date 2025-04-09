@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rigid;
     Animator anim;
+    SpriteRenderer sprt;
 
     float horizontalValue;
     [SerializeField] bool jumpActivated = false;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sprt = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpActivated = true;
         }
+
+        Flip();
     }
     void FixedUpdate()
     {
@@ -66,4 +70,11 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(detectionPoint.position, detectionSize);
     }
 
+    public void Flip()
+    {
+        if (horizontalValue > 0 && sprt.flipX == true || horizontalValue < 0 && sprt.flipX == false)
+        {
+            sprt.flipX = !sprt.flipX;
+        }
+    }
 }
