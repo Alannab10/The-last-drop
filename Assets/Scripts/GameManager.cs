@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControladorPaneles : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject panelInicio, panelFinalizado, panelPausa, panelAjustes;
 
