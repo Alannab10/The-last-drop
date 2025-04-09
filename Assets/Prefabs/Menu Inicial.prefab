@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5208296294465539342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -370,7 +370,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1627964288367027581}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7612672431698518358}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: GameResumed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4628560766491950806
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121380933897169547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7612672431698518358}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: GameQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5031582999393566942
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8963856183310625621}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7612672431698518358}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: GameQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6892021542985231184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1276,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3857871646962194936}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7612672431698518358}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: GameQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7248206761076920997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1542,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7242516561919968112}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7612672431698518358}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: GameReload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8014228432972094799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3964163890749633742
 RectTransform:
   m_ObjectHideFlags: 0

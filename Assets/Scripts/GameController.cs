@@ -9,11 +9,11 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
 
     public delegate void DelegatedGameEvents();
-    public DelegatedGameEvents GameStartedFirstTimeEvent;
-    public DelegatedGameEvents GamePausedEvent;
-    public DelegatedGameEvents GameResumedEvent;
-    public DelegatedGameEvents GameEndedEvent;
-     void Awake()
+    [SerializeField] DelegatedGameEvents GameStartedFirstTimeEvent;
+    [SerializeField] DelegatedGameEvents GamePausedEvent;
+    [SerializeField] DelegatedGameEvents GameResumedEvent;
+    [SerializeField] DelegatedGameEvents GameEndedEvent;
+    void Awake()
     {
         if (Instance == null)
         {
@@ -51,6 +51,6 @@ public class GameController : MonoBehaviour
     }
     public void GameQuit()
     {
-        Application.Quit(); 
+        Application.Quit();
     }
 }
