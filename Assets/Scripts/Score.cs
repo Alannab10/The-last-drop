@@ -10,11 +10,7 @@ public class Score : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (GameController.Instancia != null && GameController.Instancia.score != null)
-            {
-                GameController.Instancia.score.AddScore(score);
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
         }
-        }
+    }
 }
