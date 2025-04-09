@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController Instancia;
-
+    public ScoreController score;
+        
     public delegate void EventosGameDelegado();
     public EventosGameDelegado iniciadoEvento;
     public EventosGameDelegado finalizadoEvento;
