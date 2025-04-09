@@ -7,11 +7,12 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instancia;
 
-    public delegate void EventosJuegoDelegado();
-    public EventosJuegoDelegado JuegoIniciadoEvento;
-    public EventosJuegoDelegado JuegoFinalizadoEvento;
-    public EventosJuegoDelegado JuegoPausadoEvento;
-    public EventosJuegoDelegado JuegoReanudadoEvento;
+    public delegate void EventosGameDelegado();
+    public EventosGameDelegado iniciadoEvento;
+    public EventosGameDelegado finalizadoEvento;
+    public EventosGameDelegado pausadoEvento;
+    public EventosGameDelegado reanudadoEvento;
+    public EventosGameDelegado ajustesEvento;
 
     public void Awake()
     {
@@ -30,25 +31,31 @@ public class GameController : MonoBehaviour
     public void IniciarJuego()
     {
         Time.timeScale = 1f;
-        JuegoIniciadoEvento?.Invoke();
+        iniciadoEvento?.Invoke();
     }
 
     public void FinalizarJuego()
     {
         Time.timeScale = 0f;
-        JuegoFinalizadoEvento?.Invoke();
+        finalizadoEvento?.Invoke();
     }
 
     public void PausarJuego()
     {
         Time.timeScale = 0f;
-        JuegoPausadoEvento?.Invoke();
+        pausadoEvento?.Invoke();
     }
 
     public void ReanudarJuego()
     {
         Time.timeScale = 1f;
-        JuegoReanudadoEvento?.Invoke();
+        reanudadoEvento?.Invoke();
+    }
+
+    public void AjustesJuego()
+    {
+        Time.timeScale = 0f;
+        pausadoEvento?.Invoke();
     }
 
     public void CerrarJuego()
