@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
     public void IniciarJuego()
     {
         Time.timeScale = 1f;
+        SceneManager.LoadScene("Level 1");
         iniciadoEvento?.Invoke();
     }
 
@@ -66,7 +67,7 @@ public class GameController : MonoBehaviour
 
     public void ReiniciarJuego()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 
