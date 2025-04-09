@@ -24,7 +24,7 @@ public class ControladorPaneles : MonoBehaviour
         panelInicio.SetActive(false);
         panelFinalizado.SetActive(false);
         panelAjustes.SetActive(false);
-
+        
     }
 
     public void MostrarFinalizado()
