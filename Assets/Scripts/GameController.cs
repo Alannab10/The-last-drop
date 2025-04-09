@@ -34,8 +34,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level 1");
         iniciadoEvento?.Invoke();
-        SceneManager.LoadScene("level 1");
-
+     
     }
 
     public void FinalizarJuego()
